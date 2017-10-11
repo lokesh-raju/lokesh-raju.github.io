@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Theme Made By www.w3schools.com - No Copyright -->
+  <title>Bootstrap Theme Company Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+  /* CONTACTS */
+  .page-header {
+    /* padding-bottom: 9px; */
+    margin: 2px 0 15px;
+    border-bottom: 1px solid #eee;
+}
+
+
+  
+.contact-box {
+  background-color: #ffffff;
+  border: 1px solid #e7eaec;
+  padding: 20px;
+  margin-bottom: 20px;
+  color: black;
+}
+.contact-box > a {
+  color: inherit;
+}
+.contact-box.center-version {
+  border: 1px solid #e7eaec;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+}
+.contact-box.center-version > a {
+  display: block;
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+.contact-box.center-version > a img {
+  width: 100%;
+}
+.contact-box.center-version address {
+  margin-bottom: 0;
+}
+.contact-box .contact-box-footer {
+  text-align: center;
+  background-color: #ffffff;
+  border-top: 1px solid #e7eaec;
+  padding: 15px 20px;
+}
+a{
+    text-decoration:none !important;    
+}
+  body {
+      font: 400 15px Lato, sans-serif;
+      line-height: 1.8;
+      color: #818181;
+  }
+  h2 {
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #303030;
+      font-weight: 600;
+      margin-bottom: 30px;
+  }
+  h4 {
+      font-size: 19px;
+      line-height: 1.375em;
+      color: #303030;
+      font-weight: 400;
+      margin-bottom: 20px;
+  }  
+  .jumbotron {
+      background-color: #00B16A;
+      color: #fff;
+      padding: 57px 25px;
+      font-family: Montserrat, sans-serif;
+	  margin-bottom: 0px;
+  }
+  .container-fluid {
+      padding: 60px 50px;
+  }
+  
+  .container-fluid-large {
+      padding: 50px 170px;
+  }
+  
+  .bg-grey {
+      background-color: #f6f6f6;
+  }
+  .logo-small {
+      color: #00B16A;
+      font-size: 50px;
+  }
+  .logo-smaller {
+      color: #00B16A;
+      font-size: 15px;
+  }
+  .logo {
+      color: #00B16A;
+      font-size: 200px;
+  }
+  .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      border-radius: 0;
+  }
+  .thumbnail img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: 10px;
+  }
+  .carousel-control.right, .carousel-control.left {
+      background-image: none;
+      color: #00B16A;
+  }
+  .carousel-indicators li {
+      border-color: #00B16A;
+  }
+  .carousel-indicators li.active {
+      background-color: #00B16A;
+  }
+  .item h4 {
+      font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 254px;
+    max-width: 700px;
+    align-content: center;
+    margin-top: 21px;
+  }
+  .item span {
+      font-style: normal;
+  }
+  .panel {
+      border: 1px solid #00B16A; 
+      border-radius:0 !important;
+      transition: box-shadow 0.5s;
+  }
+  .panel:hover {
+      box-shadow: 5px 0px 40px rgba(0,0,0, .2);
+  }
+  .panel-footer .btn:hover {
+      border: 1px solid #00B16A;
+      background-color: #fff !important;
+      color: #00B16A;
+  }
+  .panel-heading {
+      color: #fff !important;
+      background-color: #00B16A !important;
+      padding: 25px;
+      border-bottom: 1px solid transparent;
+      border-top-left-radius: 0px;
+      border-top-right-radius: 0px;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+  }
+  .panel-footer {
+      background-color: white !important;
+  }
+  .panel-footer h3 {
+      font-size: 32px;
+  }
+  .panel-footer h4 {
+      color: #aaa;
+      font-size: 14px;
+  }
+  .panel-footer .btn {
+      margin: 15px 0;
+      background-color: #00B16A;
+      color: #fff;
+  }
+  .navbar {
+      margin-bottom: 0;
+      background-color: #00B16A;
+      z-index: 9999;
+      border: 0;
+      font-size: 12px !important;
+      line-height: 1.42857143 !important;
+      letter-spacing: 4px;
+      border-radius: 0;
+      font-family: Montserrat, sans-serif;
+  }
+  .navbar li a, .navbar .navbar-brand {
+      color: #fff !important;
+  }
+  .navbar-nav li a:hover, .navbar-nav li.active a {
+      color: #00B16A !important;
+      background-color: #fff !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+      color: #fff !important;
+  }
+  footer .glyphicon {
+      font-size: 20px;
+      margin-bottom: 20px;
+      color: #00B16A;
+  }
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1s;
+      -webkit-animation-duration: 1s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(70%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  @media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+  }
+  .card {
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+	background-color: #fff;
+	color: black;
+	padding: 30px;
+}
+
+.card-big {
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+    margin: auto;
+	background-color: #fff;
+	color: black;
+	padding: 30px;
+}
+
+.align-center{
+	text-align: center;
+}
+
+.title {
+    color: grey;
+    font-size: 18px;
+}
+
+<!--.blockquote:before{
+content: open-quote;
+}
+.blockquote:after{
+content: close-quote;
+}-->
+blockquote:before {
+  color: #fff;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+
+blockquote:after {
+  color: #fff;
+  content: close-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
+}
+.img-size{
+  max-width:113%;
+}
+.skillbar {
+	position:relative;
+	display:block;
+	margin-bottom:15px;
+	width:100%;
+	background:#eee;
+	height:35px;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	-webkit-transition:0.4s linear;
+	-moz-transition:0.4s linear;
+	-ms-transition:0.4s linear;
+	-o-transition:0.4s linear;
+	transition:0.4s linear;
+	-webkit-transition-property:width, background-color;
+	-moz-transition-property:width, background-color;
+	-ms-transition-property:width, background-color;
+	-o-transition-property:width, background-color;
+	transition-property:width, background-color;
+}
+
+.skillbar-title {
+	position:absolute;
+	top:0;
+	left:0;
+width:110px;
+	font-weight:bold;
+	font-size:13px;
+	color:#ffffff;
+	background:#6adcfa;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-title span {
+	display:block;
+	background:rgba(0, 0, 0, 0.1);
+	padding:0 20px;
+	height:35px;
+	line-height:35px;
+	-webkit-border-top-left-radius:3px;
+	-webkit-border-bottom-left-radius:3px;
+	-moz-border-radius-topleft:3px;
+	-moz-border-radius-bottomleft:3px;
+	border-top-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+
+.skillbar-bar {
+	height:35px;
+	width:0px;
+	background:#6adcfa;
+	border-radius:3px;
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+}
+
+.skill-bar-percent {
+	position:absolute;
+	right:10px;
+	top:0;
+	font-size:11px;
+	height:35px;
+	line-height:35px;
+	color:#ffffff;
+	color:rgba(0, 0, 0, 0.4);
+}
+.timeline {
+    list-style: none;
+    padding: 20px 0 20px;
+    position: relative;
+}
+
+    .timeline:before {
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        content: " ";
+        width: 3px;
+        background-color: #00B16A;
+        left: 50%;
+        margin-left: -1.5px;
+    }
+
+    .timeline > li {
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline > li:after {
+            clear: both;
+        }
+
+        .timeline > li:before,
+        .timeline > li:after {
+            content: " ";
+            display: table;
+        }
+
+        .timeline > li:after {
+            clear: both;
+        }
+
+        .timeline > li > .timeline-panel {
+            width: 46%;
+            float: left;
+            border: 1px solid #00B16A;
+            border-radius: 2px;
+            padding: 20px;
+            position: relative;
+            -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+            box-shadow: 0 1px 6px rgba(0, 0, 0, 0.175);
+        }
+
+            .timeline > li > .timeline-panel:before {
+                position: absolute;
+                top: 26px;
+                right: -15px;
+                display: inline-block;
+                border-top: 15px solid transparent;
+                border-left: 15px solid #00B16A;
+                border-right: 0 solid #00B16A;
+                border-bottom: 15px solid transparent;
+                content: " ";
+            }
+
+            .timeline > li > .timeline-panel:after {
+                position: absolute;
+                top: 27px;
+                right: -14px;
+                display: inline-block;
+                border-top: 14px solid transparent;
+                border-left: 14px solid #00B16A;
+                border-right: 0 solid #00B16A;
+                border-bottom: 14px solid transparent;
+                content: " ";
+            }
+
+        .timeline > li > .timeline-badge {
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1.4em;
+            text-align: center;
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            margin-left: -25px;
+            background-color: #F7CA18;
+            z-index: 100;
+            border-top-right-radius: 50%;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            border-bottom-left-radius: 50%;
+        }
+
+        .timeline > li.timeline-inverted > .timeline-panel {
+            float: right;
+        }
+
+            .timeline > li.timeline-inverted > .timeline-panel:before {
+                border-left-width: 0;
+                border-right-width: 15px;
+                left: -15px;
+                right: auto;
+            }
+
+            .timeline > li.timeline-inverted > .timeline-panel:after {
+                border-left-width: 0;
+                border-right-width: 14px;
+                left: -14px;
+                right: auto;
+            }
+
+.timeline-badge.primary {
+    background-color: #2e6da4 !important;
+}
+
+.timeline-badge.success {
+    background-color: #3f903f !important;
+}
+
+.timeline-badge.warning {
+    background-color: #f0ad4e !important;
+}
+
+.timeline-badge.danger {
+    background-color: #d9534f !important;
+}
+
+.timeline-badge.info {
+    background-color: #5bc0de !important;
+}
+
+.timeline-title {
+    margin-top: 0;
+    color: inherit;
+}
+
+.timeline-body > p,
+.timeline-body > ul {
+    margin-bottom: 0;
+}
+
+    .timeline-body > p + p {
+        margin-top: 5px;
+    }
+
+@media (max-width: 767px) {
+    ul.timeline:before {
+        left: 40px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        width: calc(100% - 90px);
+        width: -moz-calc(100% - 90px);
+        width: -webkit-calc(100% - 90px);
+    }
+
+    ul.timeline > li > .timeline-badge {
+        left: 15px;
+        margin-left: 0;
+        top: 16px;
+    }
+
+    ul.timeline > li > .timeline-panel {
+        float: right;
+    }
+
+        ul.timeline > li > .timeline-panel:before {
+            border-left-width: 0;
+            border-right-width: 15px;
+            left: -15px;
+            right: auto;
+        }
+
+        ul.timeline > li > .timeline-panel:after {
+            border-left-width: 0;
+            border-right-width: 14px;
+            left: -14px;
+            right: auto;
+        }
+}
+.parallax {
+    /* The image used */
+    background-image: url("background.jpg");
+
+    /* Set a specific height */
+    min-height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+  </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#myPage">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#skills">SKILLS</a></li>
+        <li><a href="#experience">EXPERIENCE</a></li>
+        <li><a href="#testimonial">TESTIMONIAL</a></li>
+        <li><a href="#contact">HIRE ME</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div id="about" class="jumbotron text-center">
+			<div class="card">
+				<img src="lokesh.png" class=" img-circle margin" style="display:inline" alt="Lokesh">
+				<h3>Lokesh Raju S</h3>
+				<div class="font-bold">Senior Software Engineer</div>
+				<br/>
+                    <address class="m-t-md">
+                        <span class="glyphicon glyphicon-home logo-smaller"></span>&nbsp;Bangalore, Karnataka<br>
+                        <span class="glyphicon glyphicon-phone logo-smaller"></span>&nbsp;+91 - 9632766549<br>
+                        <span class="glyphicon glyphicon-envelope logo-smaller"></span>&nbsp;lokeshraju1102192@gmail.com<br>
+                    </address>
+</div>
+<div class="container-fluid">
+<p class="blockquote">
+A result oriented and self-learned software professional with 3 years of experience in software development using Java technologies.Good experience in developing Web applications using Java, Rest Full Web Services, Eclipse , GIT , Jenkins , Sonar.
+</p>
+</div>
+</div>
+  <!--<img src="lokesh.png" class=" img-circle margin" style="display:inline" alt="Lokesh" width="150" height="150">  -->
+</div>
+
+<!-- Container (About Section) -->
+<div id="skills" class="container-fluid-large bg-grey">
+  <div class="row card-big">
+    <div class="col-sm-8">
+	<div class="page-header">
+      <h2>Skills</h2>
+	  </div>
+      <div class="skillbar clearfix " data-percent="20%">
+	<div class="skillbar-title" style="background: #d35400;"><span>HTML5</span></div>
+	<div class="skillbar-bar" style="background: #e67e22;"></div>
+	<div class="skill-bar-percent">20%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="25%">
+	<div class="skillbar-title" style="background: #2980b9;"><span>CSS3</span></div>
+	<div class="skillbar-bar" style="background: #3498db;"></div>
+	<div class="skill-bar-percent">25%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="50%">
+	<div class="skillbar-title" style="background: #2c3e50;"><span>jQuery</span></div>
+	<div class="skillbar-bar" style="background: #2c3e50;"></div>
+	<div class="skill-bar-percent">50%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="80%">
+	<div class="skillbar-title" style="background: #46465e;"><span>Core Java</span></div>
+	<div class="skillbar-bar" style="background: #5a68a5;"></div>
+	<div class="skill-bar-percent">80%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="65%">
+	<div class="skillbar-title" style="background: #333333;"><span>Jenkins</span></div>
+	<div class="skillbar-bar" style="background: #525252;"></div>
+	<div class="skill-bar-percent">65%</div>
+</div> <!-- End Skill Bar -->
+
+<div class="skillbar clearfix " data-percent="80%">
+	<div class="skillbar-title" style="background: #27ae60;"><span>Git</span></div>
+	<div class="skillbar-bar" style="background: #2ecc71;"></div>
+	<div class="skill-bar-percent">80%</div>
+</div> <!-- End Skill Bar -->
+    </div>
+    <div class="col-sm-4 align-center">
+      <img src="Skills.jpg" class="img-size" style="display:inline" alt="Lokesh">
+    </div>
+  </div>
+</div>
+
+<div id="experience" class="container-fluid-large bg-grey">
+   <div class="row card-big">
+    <div class="container">
+    <div class="page-header">
+        <h1 id="timeline">Experience</h1>
+    </div>
+    <ul class="timeline">
+        <li>
+          <div class="timeline-badge"><i class="glyphicon glyphicon-pencil"></i></div>
+			<div class="timeline-panel">
+				<div class="timeline-heading">
+              <h4 class="timeline-title">Project 1 : Docusign (eSignature Platform)<h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>&nbsp;<b>Duration:</b> Dec 2016 to till Date.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-user"></i>&nbsp;<b>TeamSize:</b> 5.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-cloud"></i>&nbsp;<b>Client:</b> Cisco.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-cog"></i>&nbsp;<b>Architecture:</b> MicroService Architecture.</small>
+			  </p>
+				</div>
+            <div class="timeline-body">
+			<h4>Description:</h4>
+              <ul>
+			    <li>Docusign is a product from purchased by Cisco which provides digitization platform for its internal Customers/External Customers</li>
+			    <li>It is a platform which provides an interface for customers as well their application’s to integrate their contracts/Documents for eSignatures.</li>
+			  </ul>
+			  <h4>Roles and Responsibilities:</h4>
+              <ul>
+			    <li>Involved in requirement analysis as well as Solution discussion for various clients internal to Cisco around eSignature usage.</li>
+			    <li>Implemented Layer 7 policy handler for events to be captured from an external services to connect to internal server inside Cisco</li>
+			  </ul>
+    		</div>
+          </div>
+        </li>
+        <li class="timeline-inverted">
+          <div class="timeline-badge warning"><i class="glyphicon glyphicon-globe"></i></div>
+          <div class="timeline-panel">
+				<div class="timeline-heading">
+              <h4 class="timeline-title">Project 2 : CLASS (Cisco Localization Architecture Solutions and Services)<h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>&nbsp;<b>Duration:</b> Dec 2015 to till Date.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-user"></i>&nbsp;<b>TeamSize:</b> 5.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-cloud"></i>&nbsp;<b>Client:</b> Cisco.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-cog"></i>&nbsp;<b>Architecture:</b> MicroService Architecture.</small>
+			  </p>
+				</div>
+            <div class="timeline-body">
+			<h4>Description:</h4>
+              <ul>
+			    <li>CLASS is a product from Cisco which provides a localization platform for its internal Customers.</li>
+			    <li>It is a platform which provides an interface for customer application’s content to be translated to desired languages.</li>
+				<li>It also provides a tool (Globalyzer) which enables customer teams to find out the values which need to be translated during the project build step.</li>
+			  </ul>
+			  <h4>Roles and Responsibilities:</h4>
+              <ul>
+			    <li>Involved in requirement analysis and design of the Plugins in Jenkins which enables scan of source code to find localization issues.</li>
+			    <li>Implemented RestFull Web Services using spring boot.</li>
+				<li>Written Unit test cases and done bug fixing.</li>
+			  </ul>
+    		</div>
+			</div>
+        </li>
+        <li>
+          <div class="timeline-badge danger"><i class="glyphicon glyphicon-phone-alt"></i></div>
+          <div class="timeline-panel">
+				<div class="timeline-heading">
+              <h4 class="timeline-title">Project 3 : Click To Call<h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>&nbsp;<b>Duration:</b>Nov 2014 to Dec 2015.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-user"></i>&nbsp;<b>TeamSize:</b> 6.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-cloud"></i>&nbsp;<b>Client:</b> Cisco.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-cog"></i>&nbsp;<b>Architecture:</b> MicroService Architecture.</small>
+			  </p>
+				</div>
+            <div class="timeline-body">
+			<h4>Description:</h4>
+              <ul>
+			    <li>Click To Call: is a product of Cisco which enables a conferencing feature across customers and agent </li>
+			    <li>Click To Call is used as a web service which enables call conferencing feature across users.</li>
+				<li>Click to Click helped in reducing the turnaround time in resolution of incidents.</li>
+			  </ul>
+			  <h4>Roles and Responsibilities:</h4>
+              <ul>
+			    <li>Involved in requirement analysis and design of the  api for VOIP integration (Tropo)</li>
+			    <li>Implemented Services which can be consumed to invoke the Click to Call Functionality.</li>
+				<li>Involved in Testing and Bug fixing.</li>
+			  </ul>
+    		</div>
+			</div>
+        </li>
+        
+</div>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div id="testimonial" class="container-fluid-large bg-grey"> 
+   <div class="card-big">
+   <div class="page-header align-center">
+	<h3>What our colleague have to say about me!</h3>
+	</div>
+     <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <h4>"Lokesh is a magician when it comes to coding .
+No matter what the deadlines are,his code has always been delivered before time and that too with minimal bugs.
+Even if the technology is new or there is something he doesn't know about, he can come upto speed in no time.
+He is a great team player and an asset to the organisation."<br><span>Mayank Kamnami, Senior Software Engineer, Nucleus Software</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Great team player. Always eager to learn new technologies. Very strong technically. It was a pleasure working with Lokesh."<br><span>Anamika Patel,Senior Software Engineer, Infosys</span></h4>
+      </div>
+      <div class="item">
+        <h4>"Lokesh is a very dedicated employee. Always completes his deliverable on time and has a zeal to learn new and interesting things. Very innovative and his inquisitive nature helps him to learn different technologies. He is a brilliant colleague and a great leader."<br><span>Saumya Shrivastava, Senior Software Engineer, Infosys</span></h4>
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  </div>
+  </div>
+  
+<!-- Container (Contact Section) -->
+<div id="contact" class="container-fluid-large bg-grey">
+<div class="card-big">
+<div class="page-header align-center">
+  <h3 class="text-center">HIRE ME</h3>
+  </div>
+  
+  <div class="row">
+    <div class="col-sm-5">
+      <p>Contact me.</p>
+      <p><span class="glyphicon glyphicon-map-marker"></span> Bangalore, India</p>
+      <p><span class="glyphicon glyphicon-phone"></span> +91 9632766549</p>
+      <p><span class="glyphicon glyphicon-envelope"></span> lokeshraju1102192@gmail.com</p>
+    </div>
+    <div class="col-sm-7 slideanim">
+      <div class="row">
+	  <form action="javascript:sendMail();" name="pmForm" id="pmForm" method="post">
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+        </div>
+        <div class="col-sm-6 form-group">
+          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+        </div>
+      </div>
+      <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea><br>
+      <div class="row">
+        <div class="col-sm-12 form-group">
+          <button class="btn btn-default pull-right" type="submit">Send</button>
+        </div>
+		</form>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+
+<!-- Add Google Maps -->
+<div id="contactmap" class="container-fluid-large bg-grey">
+<div class="card-big" >
+<div id="googleMap" style="height:400px;width:100%;"></div>
+</div>
+</div>
+<script>
+function myMap() {
+var myCenter = new google.maps.LatLng(12.9716, 77.5946);
+var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
+var marker = new google.maps.Marker({position:myCenter});
+marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAnS6ZyZr8JlfsBY0RBl81sa8StdAl4lug&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+<footer class="container-fluid text-center">
+  <a href="#myPage" title="To Top">
+    <span class="glyphicon glyphicon-chevron-up"></span>
+  </a>
+  <p>LOKESH RAJU S</p>
+</footer>
+
+<script>
+$(document).ready(function(){
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {
+      // Prevent default anchor click behavior
+      event.preventDefault();
+
+      // Store hash
+      var hash = this.hash;
+
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+  
+  $(window).scroll(function() {
+    $(".slideanim").each(function(){
+      var pos = $(this).offset().top;
+
+      var winTop = $(window).scrollTop();
+        if (pos < winTop + 600) {
+          $(this).addClass("slide");
+        }
+    });
+  });
+  
+  jQuery('.skillbar').each(function(){
+		jQuery(this).find('.skillbar-bar').animate({
+			width:jQuery(this).attr('data-percent')
+		},6000);
+	});
+ 
+  
+})
+ function sendMail(){
+  window.open('mailto:lokeshraju1102192@gmail.com?subject=email&body=comments');
+  }
+</script>
+
+</body>
+</html>
