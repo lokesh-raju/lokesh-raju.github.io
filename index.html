@@ -11,12 +11,218 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
   <style>
+  /* -----------------------------------------------
+ * timeline2
+ * --------------------------------------------- */
+ .timeline2 {
+    list-style: none;
+    padding: 10px 0;
+    position: relative;
+    font-weight: 400;
+    color: #2b2b2b;
+}
+.timeline2:before {
+    top: 0;
+    bottom: 0;
+    position: absolute;
+    content:" ";
+    width: 2px;
+    background: #00B16A;
+    left: 50%;
+    margin-left: -1.5px;
+}
+.timeline2 > li {
+    margin-bottom: 20px;
+    position: relative;
+    width: 50%;
+    float: left;
+    clear: left;
+}
+.timeline2 > li:before, .timeline2 > li:after {
+    content:" ";
+    display: table;
+}
+.timeline2 > li:after {
+    clear: both;
+}
+.timeline2 > li:before, .timeline2 > li:after {
+    content:" ";
+    display: table;
+}
+.timeline2 > li:after {
+    clear: both;
+}
+.timeline2 > li > .timeline2-panel {
+    width: calc(100% - 25px);
+    width: -moz-calc(100% - 25px);
+    width: -webkit-calc(100% - 25px);
+    float: left;
+    border: 1px solid #dcdcdc;
+    box-shadow: 4px 4px 8px 4px rgba(0, 0, 0, 0.2);
+    background: #ffffff;
+    position: relative;
+    padding: 2%;
+}
+.timeline2 > li > .timeline2-panel:before {
+    position: absolute;
+    top: 26px;
+    right: -15px;
+    display: inline-block;
+    border-top: 15px solid transparent;
+    border-left: 15px solid #dcdcdc;
+    border-right: 0 solid #dcdcdc;
+    border-bottom: 15px solid transparent;
+    content:" ";
+}
+.timeline2 > li > .timeline2-panel:after {
+    position: absolute;
+    top: 27px;
+    right: -14px;
+    display: inline-block;
+    border-top: 14px solid transparent;
+    border-left: 14px solid #ffffff;
+    border-right: 0 solid #ffffff;
+    border-bottom: 14px solid transparent;
+    content:" ";
+}
+.timeline2 > li > .timeline2-badge {
+    color: #00b16a;
+    width: 24px;
+    height: 31px;
+    line-height: 36px;
+    text-align: center;
+    position: absolute;
+    top: 24px;
+    right: -12px;
+    z-index: 110;
+    font-size: 17px;
+    background: #00b16a;
+    
+}
+.timeline2 > li.timeline2-inverted > .timeline2-panel {
+    float: right;
+}
+.timeline2 > li.timeline2-inverted > .timeline2-panel:before {
+    border-left-width: 0;
+    border-right-width: 15px;
+    left: -15px;
+    right: auto;
+}
+.timeline2 > li.timeline2-inverted > .timeline2-panel:after {
+    border-left-width: 0;
+    border-right-width: 14px;
+    left: -14px;
+    right: auto;
+}
+.timeline2-badge > a {
+    color: #ffffff !important;
+}
+.timeline2-badge a:hover {
+    color: #dcdcdc !important;
+}
+.timeline2-title {
+    margin-top: 0;
+    color: inherit;
+}
+.timeline2-heading h4 {
+    font-weight: 400;
+    padding: 0 15px;
+    color: #00B16A;
+}
+
+.timeline2-body h4 {
+    font-weight: 400;
+    padding: 0 15px;
+    color: #00B16A;
+}
+
+.timeline2-heading p {
+       margin-left: 2%;
+}
+/* .timeline2-body > p, .timeline2-body > ul {
+    padding: 10px 15px;
+    margin-bottom: 0;
+} */
+.timeline2-footer {
+    padding: 5px 15px;
+    background-color:#f4f4f4;
+}
+.timeline2-footer p { margin-bottom: 0; }
+.timeline2-footer > a {
+    cursor: pointer;
+    text-decoration: none;
+}
+.timeline2 > li.timeline2-inverted {
+    float: right;
+    clear: right;
+}
+.timeline2 > li:nth-child(2) {
+       margin-top: 20%;
+}
+
+.timeline2 > li:nth-child(3) {
+       margin-top: 10%;
+}
+.timeline2 > li.timeline2-inverted > .timeline2-badge {
+    left: -12px;
+}
+.no-float {
+    float: none !important;
+}
+@media (max-width: 767px) {
+    ul.timeline2:before {
+        left: 40px;
+    }
+    ul.timeline2 > li {
+        margin-bottom: 0px;
+        position: relative;
+        width:100%;
+        float: left;
+        clear: left;
+    }
+    ul.timeline2 > li > .timeline2-panel {
+        width: calc(100% - 65px);
+        width: -moz-calc(100% - 65px);
+        width: -webkit-calc(100% - 65px);
+    }
+    ul.timeline2 > li > .timeline2-badge {
+        left: 28px;
+        margin-left: 0;
+        top: 16px;
+    }
+    ul.timeline2 > li > .timeline2-panel {
+        float: right;
+    }
+    ul.timeline2 > li > .timeline2-panel:before {
+        border-left-width: 0;
+        border-right-width: 15px;
+        left: -15px;
+        right: auto;
+    }
+    ul.timeline2 > li > .timeline2-panel:after {
+        border-left-width: 0;
+        border-right-width: 14px;
+        left: -14px;
+        right: auto;
+    }
+    .timeline2 > li.timeline2-inverted {
+        float: left;
+        clear: left;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .timeline2 > li.timeline2-inverted > .timeline2-badge {
+        left: 28px;
+    }
+}
+
   /* CONTACTS */
   .page-header {
     /* padding-bottom: 9px; */
     margin: 2px 0 15px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 2px solid #00B16A;
 }
 
 
@@ -63,6 +269,7 @@ a{
       font: 400 15px Lato, sans-serif;
       line-height: 1.8;
       color: #818181;
+  font-family: 'Open Sans', sans-serif;
   }
   h2 {
       font-size: 24px;
@@ -82,7 +289,7 @@ a{
       background-color: #00B16A;
       color: #fff;
       padding: 57px 25px;
-      font-family: Montserrat, sans-serif;
+      font-family: 'Open Sans', sans-serif;
 	  margin-bottom: 0px;
   }
   .container-fluid {
@@ -211,8 +418,8 @@ a{
   .slide {
       animation-name: slide;
       -webkit-animation-name: slide;
-      animation-duration: 1s;
-      -webkit-animation-duration: 1s;
+      animation-duration: 3s;
+      -webkit-animation-duration: 3s;
       visibility: visible;
   }
   @keyframes slide {
@@ -557,6 +764,10 @@ width:110px;
             left: -14px;
             right: auto;
         }
+        .timeline-title {
+    font-size: 20px;
+    font-size: 1.25rem;
+}
 }
 .parallax {
     /* The image used */
@@ -667,7 +878,111 @@ A result oriented and self-learned software professional with 3 years of experie
   </div>
 </div>
 
-<div id="experience" class="container-fluid-large bg-grey">
+<div id="experience"  class="container-fluid-large bg-grey">
+<div class="page-header">
+      <h2>Experience</h2>
+	  </div>
+<ul class="timeline2">
+    <li>
+        <div class="timeline2-badge">
+          <a><i class="glyphicon glyphicon-pencil"></i></a>
+        </div>
+        <div class="timeline2-panel">
+            <div class="timeline2-heading">
+                <h4>Project 1 : Docusign (eSignature Platform)</h4>
+                <p style=""><small class="text-muted"><i class="glyphicon glyphicon-time"></i>&nbsp;<b>Duration:</b> Dec 2016 to till Date.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-user"></i>&nbsp;<b>TeamSize:</b> 5.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-cloud"></i>&nbsp;<b>Client:</b> Cisco.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-cog"></i>&nbsp;<b>Architecture:</b> MicroService Architecture.</small>
+			  </p>
+            </div>
+            <div class="timeline2-body">
+               <h4>Description:</h4>
+              <ul>
+			    <li>Docusign is a product from purchased by Cisco which provides digitization platform for its internal Customers/External Customers</li>
+			    <li>It is a platform which provides an interface for customers as well their application’s to integrate their contracts/Documents for eSignatures.</li>
+			  </ul>
+			  <h4>Roles and Responsibilities:</h4>
+              <ul>
+			    <li>Involved in requirement analysis as well as Solution discussion for various clients internal to Cisco around eSignature usage.</li>
+			    <li>Implemented Layer 7 policy handler for events to be captured from an external services to connect to internal server inside Cisco</li>
+			  </ul>
+            </div>
+            <div class="timeline2-footer">
+               <p><small class="text-right"><i class="glyphicon glyphicon-time"></i>&nbsp;<b>Duration:</b> Dec 2016 to till Date.</small>
+            </div>
+        </div>
+    </li>
+    
+    <li class="timeline2-inverted">
+        <div class="timeline2-badge">
+            <a><i class="glyphicon glyphicon-globe"></i></a>
+        </div>
+        <div class="timeline2-panel">
+            <div class="timeline2-heading">
+               <h4>Project 2 : CLASS (Cisco Localization Architecture Solutions and Services)</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>&nbsp;<b>Duration:</b> Dec 2016 to till Date.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-user"></i>&nbsp;<b>TeamSize:</b> 5.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-cloud"></i>&nbsp;<b>Client:</b> Cisco.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-cog"></i>&nbsp;<b>Architecture:</b> MicroService Architecture.</small>
+			  </p>
+            </div>
+            <div class="timeline2-body">
+               <h4>Description:</h4>
+              <ul>
+			    <li>CLASS is a product from Cisco which provides a localization platform for its internal Customers.</li>
+			    <li>It is a platform which provides an interface for customer application’s content to be translated to desired languages.</li>
+				<li>It also provides a tool (Globalyzer) which enables customer teams to find out the values which need to be translated during the project build step.</li>
+			  </ul>
+			  <h4>Roles and Responsibilities:</h4>
+              <ul>
+			    <li>Involved in requirement analysis and design of the Plugins in Jenkins which enables scan of source code to find localization issues.</li>
+			    <li>Implemented RestFull Web Services using spring boot.</li>
+				<li>Written Unit test cases and done bug fixing.</li>
+			  </ul>
+            </div>
+            <div class="timeline2-footer">
+                <small class="text-right"><i class="glyphicon glyphicon-time"></i>&nbsp;<b>Duration:</b> Dec 2016 to till Date.</small>
+            </div>
+        </div>
+    </li>
+    
+    <li>
+        <div class="timeline2-badge">
+            <a><i class="glyphicon glyphicon-phone-alt"></i></a>
+        </div>
+        <div class="timeline2-panel">
+            <div class="timeline2-heading">
+                 <h4>Project 3 : Click To Call</h4>
+              <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i>&nbsp;<b>Duration:</b>Nov 2014 to Dec 2015.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-user"></i>&nbsp;<b>TeamSize:</b> 6.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-cloud"></i>&nbsp;<b>Client:</b> Cisco.</small>
+			  <br><small class="text-muted"><i class="glyphicon glyphicon-cog"></i>&nbsp;<b>Architecture:</b> MicroService Architecture.</small>
+			  </p>
+            </div>
+            <div class="timeline2-body">
+               <h4>Description:</h4>
+              <ul>
+			    <li>Click To Call: is a product of Cisco which enables a conferencing feature across customers and agent </li>
+			    <li>Click To Call is used as a web service which enables call conferencing feature across users.</li>
+				<li>Click to Click helped in reducing the turnaround time in resolution of incidents.</li>
+			  </ul>
+			  <h4>Roles and Responsibilities:</h4>
+              <ul>
+			    <li>Involved in requirement analysis and design of the  api for VOIP integration (Tropo)</li>
+			    <li>Implemented Services which can be consumed to invoke the Click to Call Functionality.</li>
+				<li>Involved in Testing and Bug fixing.</li>
+			  </ul>
+            </div>
+            <div class="timeline2-footer">
+                <small class="text-right"><i class="glyphicon glyphicon-time"></i>&nbsp;<b>Duration:</b>Nov 2014 to Dec 2015.</small>
+            </div>
+        </div>
+    </li>
+    <li class="clearfix no-float"></li>
+</ul>
+</div>
+<!-- <div id="experience" class="container-fluid-large bg-grey">
    <div class="row card-big">
     <div class="container">
     <div class="page-header">
@@ -756,7 +1071,7 @@ A result oriented and self-learned software professional with 3 years of experie
         
 </div>
   </div>
-</div>
+</div> -->
 
 <!-- Container (Portfolio Section) -->
 <div id="testimonial" class="container-fluid-large bg-grey"> 
@@ -905,6 +1220,17 @@ $(document).ready(function(){
 			width:jQuery(this).attr('data-percent')
 		},6000);
 	});
+  
+  $(window).scroll(function() {
+	    $(".timeline2-panel").each(function(){
+	      var pos = $(this).offset().top;
+
+	      var winTop = $(window).scrollTop();
+	        if (pos < winTop + 600) {
+	          $(this).addClass("slide");
+	        }
+	    });
+	  });
  
   
 })
